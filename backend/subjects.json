@@ -1,0 +1,170 @@
+[
+  {
+    "subjectCode": "M101",
+    "subjectName": "Mathematics-1",
+    "year": 1,
+    "semester": 1
+  },
+  {
+    "subjectCode": "P101",
+    "subjectName": "Physics",
+    "year": 1,
+    "semester": 1
+  },
+  {
+    "subjectCode": "C101",
+    "subjectName": "Chemistry",
+    "year": 1,
+    "semester": 1
+  },
+  {
+    "subjectCode": "ENG101",
+    "subjectName": "English",
+    "year": 1,
+    "semester": 1
+  },
+  {
+    "subjectCode": "PHYLAB",
+    "subjectName": "Physics Lab",
+    "year": 1,
+    "semester": 1
+  },
+  {
+    "subjectCode": "CHEMLAB",
+    "subjectName": "Chemistry Lab",
+    "year": 1,
+    "semester": 1
+  },
+  {
+    "subjectCode": "M102",
+    "subjectName": "Mathematics-2",
+    "year": 1,
+    "semester": 2
+  },
+  {
+    "subjectCode": "E101",
+    "subjectName": "Basic Electrical",
+    "year": 1,
+    "semester": 2
+  },
+  {
+    "subjectCode": "CS101",
+    "subjectName": "Programming in C",
+    "year": 1,
+    "semester": 2
+  },
+  {
+    "subjectCode": "ENG102",
+    "subjectName": "Communication Skills",
+    "year": 1,
+    "semester": 2
+  },
+  {
+    "subjectCode": "CLAB",
+    "subjectName": "C Programming Lab",
+    "year": 1,
+    "semester": 2
+  },
+  {
+    "subjectCode": "CS201",
+    "subjectName": "Data Structures",
+    "year": 2,
+    "semester": 1
+  },
+  {
+    "subjectCode": "CS202",
+    "subjectName": "Operating Systems",
+    "year": 2,
+    "semester": 1
+  },
+  {
+    "subjectCode": "CS203",
+    "subjectName": "DBMS",
+    "year": 2,
+    "semester": 1
+  },
+  {
+    "subjectCode": "CS204",
+    "subjectName": "Computer Organization",
+    "year": 2,
+    "semester": 1
+  },
+  {
+    "subjectCode": "DSLAB",
+    "subjectName": "Data Structures Lab",
+    "year": 2,
+    "semester": 1
+  },
+  {
+    "subjectCode": "CS205",
+    "subjectName": "OOPS",
+    "year": 2,
+    "semester": 2
+  },
+  {
+    "subjectCode": "CS206",
+    "subjectName": "Computer Networks",
+    "year": 2,
+    "semester": 2
+  },
+  {
+    "subjectCode": "CS207",
+    "subjectName": "Software Engineering",
+    "year": 2,
+    "semester": 2
+  },
+  {
+    "subjectCode": "OOPLAB",
+    "subjectName": "OOP Lab",
+    "year": 2,
+    "semester": 2
+  },
+  {
+    "subjectCode": "CS301",
+    "subjectName": "Machine Learning",
+    "year": 3,
+    "semester": 1
+  },
+  {
+    "subjectCode": "CS302",
+    "subjectName": "Compiler Design",
+    "year": 3,
+    "semester": 1
+  },
+  {
+    "subjectCode": "CS303",
+    "subjectName": "Cloud Computing",
+    "year": 3,
+    "semester": 1
+  },
+  {
+    "subjectCode": "MLLAB",
+    "subjectName": "ML Lab",
+    "year": 3,
+    "semester": 1
+  },
+  {
+    "subjectCode": "CS304",
+    "subjectName": "AI",
+    "year": 3,
+    "semester": 2
+  },
+  {
+    "subjectCode": "CS305",
+    "subjectName": "Big Data",
+    "year": 3,
+    "semester": 2
+  },
+  {
+    "subjectCode": "CS401",
+    "subjectName": "Project",
+    "year": 4,
+    "semester": 1
+  },
+  {
+    "subjectCode": "CS402",
+    "subjectName": "Internship",
+    "year": 4,
+    "semester": 2
+  }
+]
