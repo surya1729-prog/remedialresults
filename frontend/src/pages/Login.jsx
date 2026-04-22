@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Toast from "../components/Toast";
+import API_BASE from "../services/api";
 import "./Login.css";
 
 function Login() {
@@ -32,7 +33,7 @@ function Login() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post(`${API_BASE}/auth/login`, {
         rollNumber,
         password,
       });
@@ -61,7 +62,7 @@ function Login() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/staff-login", {
+      const res = await axios.post(`${API_BASE}/auth/staff-login`, {
         role: loginRole,
         username,
         password,

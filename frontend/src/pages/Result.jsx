@@ -5,6 +5,7 @@ import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import RoleNavbar from "../components/RoleNavbar";
 import Toast from "../components/Toast";
+import API_BASE from "../services/api";
 import "./Result.css";
 
 const FIRST_NAMES = [
@@ -125,7 +126,7 @@ function Result() {
 
         setStudent(JSON.parse(studentString));
 
-        const res = await axios.get("http://localhost:5000/api/result/me", {
+        const res = await axios.get(`${API_BASE}/result/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

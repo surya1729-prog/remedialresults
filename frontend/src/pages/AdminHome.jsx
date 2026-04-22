@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import RoleNavbar from "../components/RoleNavbar";
 import Toast from "../components/Toast";
+import API_BASE from "../services/api";
 import "./DashboardHome.css";
 
 function AdminHome() {
@@ -43,7 +44,7 @@ function AdminHome() {
   const fetchReport = async (token, y = year, s = semester) => {
     try {
       const reportRes = await axios.get(
-        "http://localhost:5000/api/faculty-admin/reports/remedial-summary",
+        `${API_BASE}/faculty-admin/reports/remedial-summary`,
         {
           headers: { Authorization: `Bearer ${token}` },
           params: { year: y, semester: s }
@@ -72,7 +73,7 @@ function AdminHome() {
 
     const load = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/faculty-admin/overview", {
+        const res = await axios.get(`${API_BASE}/faculty-admin/overview`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setOverview(res.data);
