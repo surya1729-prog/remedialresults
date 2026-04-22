@@ -3,9 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import RoleNavbar from "../components/RoleNavbar";
 import Toast from "../components/Toast";
+import API_BASE from "../services/api";
 import "./StaffPanel.css";
-
-const API_BASE = "http://localhost:5000/api";
 const REQUIRED_HEADERS = [
   "rollNumber",
   "subjectCode",
