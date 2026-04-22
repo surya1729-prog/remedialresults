@@ -1,45 +1,64 @@
-const fs = require("fs");
+const mongoose = require("mongoose");
+require("dotenv").config();
+
+const Student = require("./models/Student");
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
+
+const students = [];
 
 const branches = [
   { name: "CSE", count: 360 },
   { name: "ECE", count: 360 },
-  { name: "CIVIL", count: 100 },
   { name: "EEE", count: 100 },
+  { name: "CIVIL", count: 100 },
   { name: "MECH", count: 100 },
   { name: "CHEM", count: 50 },
-  { name: "META", count: 30 }
+  { name: "MET", count: 30 }
 ];
 
 const batches = [
-  { prefix: "R230", year: 1 },
-  { prefix: "R220", year: 2 },
-  { prefix: "R210", year: 3 },
-  { prefix: "R200", year: 4 }
+  { prefix: "R23", year: 1 },
+  { prefix: "R22", year: 2 },
+  { prefix: "R21", year: 3 },
+  { prefix: "R20", year: 4 }
 ];
 
-let students = [];
+let counter;
 
 batches.forEach(batch => {
-  let roll = 1;
+  counter = 1;
 
   branches.forEach(branch => {
     for (let i = 0; i < branch.count; i++) {
-      const rollNumber = batch.prefix + String(roll).padStart(3, "0");
+
+      const rollNumber = `${batch.prefix}${String(counter).padStart(4, "0")}`;
 
       students.push({
         rollNumber,
         name: `Student_${rollNumber}`,
         branch: branch.name,
         year: batch.year,
-        password: "12345",
-        role: "student"
+        password: "12345"
       });
 
-      roll++;
+      counter++;
     }
   });
 });
 
-fs.writeFileSync("students.json", JSON.stringify(students, null, 2));
+const insertData = async () => {
+  try {
+    await Student.deleteMany(); // clear old
+    await Student.insertMany(students);
+    console.log("Students Generated:", students.length);
+    process.exit();
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
+};
 
-console.log("✅ Students Generated (4400)");
+insertData();

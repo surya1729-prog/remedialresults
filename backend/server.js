@@ -13,6 +13,8 @@ const resultRoutes = require("./routes/resultRoutes");
 const profileRoutes = require("./routes/profileRoutes");
 const resultSummaryRoutes = require("./routes/resultSummaryRoutes");
 const subjectListRoutes = require("./routes/subjectListRoutes");
+const resultControlRoutes = require("./routes/resultControlRoutes");
+const facultyAdminRoutes = require("./routes/facultyAdminRoutes");
 
 const app = express();
 
@@ -30,6 +32,8 @@ app.use("/api/result", resultRoutes);
 app.use("/api/profile", profileRoutes);
 app.use("/api/result-summary", resultSummaryRoutes);
 app.use("/api/subjectlist", subjectListRoutes);
+app.use("/api/result-control", resultControlRoutes);
+app.use("/api/faculty-admin", facultyAdminRoutes);
 
 app.get("/", (req, res) => {
   res.send("College Portal API is running...");

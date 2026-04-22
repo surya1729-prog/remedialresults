@@ -14,22 +14,45 @@ const marksSchema = new mongoose.Schema({
 
   mid1: {
     type: Number,
-    required: true
+    required: true,
+    min: 0,
+    max: 20
   },
 
   mid2: {
     type: Number,
-    required: true
+    required: true,
+    min: 0,
+    max: 20
   },
 
   mid3: {
     type: Number,
-    required: true
+    required: true,
+    min: 0,
+    max: 20
+  },
+
+  assignmentMarks: {
+    type: Number,
+    default: null
+  },
+
+  attendanceMarks: {
+    type: Number,
+    default: null
+  },
+
+  continuousEvaluationMarks: {
+    type: Number,
+    default: null
   },
 
   semMarks: {
     type: Number,
-    required: true
+    required: true,
+    min: 0,
+    max: 60
   }
 
 });

@@ -23,7 +23,7 @@ router.get("/:rollNumber", authMiddleware, async (req, res) => {
 
       const total = bestTwo + m.semMarks;
 
-      if (m.semMarks >= 18 && total >= 40) {
+      if (total >= 40) {
         passed++;
       } else {
         failed++;

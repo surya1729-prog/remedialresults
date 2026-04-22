@@ -1,0 +1,122 @@
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 12% 15%, rgba(244, 180, 0, 0.3), transparent 35%),
+    radial-gradient(circle at 88% 12%, rgba(15, 61, 143, 0.24), transparent 32%),
+    radial-gradient(circle at 85% 85%, rgba(15, 61, 143, 0.14), transparent 30%),
+    linear-gradient(160deg, #fff9f2 0%, #f2f7ff 55%, #f1fff9 100%);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: min(460px, 100%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 34px 28px;
+  color: #1a2f47;
+  box-shadow: 0 30px 80px rgba(19, 24, 37, 0.15);
+  backdrop-filter: blur(6px);
+  animation: riseIn 0.45s ease-out;
+}
+
+.login-logo {
+  display: block;
+  width: 108px;
+  height: 108px;
+  margin: 0 auto 12px;
+  object-fit: cover;
+  border-radius: 999px;
+  background: #ffffff;
+  padding: 4px;
+  border: 1.5px solid rgba(15, 61, 143, 0.18);
+  box-shadow: 0 6px 14px rgba(15, 61, 143, 0.16);
+}
+
+.login-card h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.7rem, 3.2vw, 2.15rem);
+  color: var(--rgukt-blue-deep);
+}
+
+.login-card p {
+  margin: 0 0 22px;
+  color: var(--ink-soft);
+}
+
+.role-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.role-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.role-tabs button {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f8fbff;
+  color: var(--rgukt-blue);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.role-tabs button.active {
+  background: linear-gradient(135deg, var(--rgukt-blue) 0%, var(--rgukt-blue-deep) 100%);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 0.98rem;
+  box-sizing: border-box;
+}
+
+.login-card input:focus {
+  border-color: var(--rgukt-blue);
+  outline: 2px solid rgba(15, 61, 143, 0.18);
+}
+
+.login-card button {
+  width: 100%;
+  margin-top: 6px;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--rgukt-blue) 0%, var(--rgukt-blue-deep) 100%);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.login-card button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(15, 61, 143, 0.34);
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
